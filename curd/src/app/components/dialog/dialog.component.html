@@ -1,0 +1,48 @@
+<h1 mat-dialog-title>Add Student Form</h1>
+
+<div mat-dialog-content>
+  <form [formGroup]="studentForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input
+        matInput
+        placeholder="Enter Full Name"
+        formControlName="fullName"
+      />
+        <mat-error *ngIf="studentForm.get('fullName')?.hasError('minlength')">Full Name should be 6 Char</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Select you City</mat-label>
+      <mat-select placeholder="City List" formControlName="city">
+        <mat-option *ngFor="let city of cityList" [value]="city">{{
+          city
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Contact No.</mat-label>
+      <input matInput placeholder="Enter Mobile No." formControlName="mobile"  maxlength="10"/>
+      <mat-error *ngIf="studentForm.get('mobile')?.hasError('pattern')">Invalid Mobile No.</mat-error>
+    </mat-form-field>
+
+    <label>Gender:</label>
+    <mat-radio-group class="example-radio-group" formControlName="gender">
+      <mat-radio-button
+        class="example-radio-button"
+        *ngFor="let list of genderList"
+        [value]="list"
+      >
+        {{ list }}
+      </mat-radio-button>
+    </mat-radio-group>
+
+    <div mat-dialog-actions align="end">
+      <button mat-raised-button color="primary" (click)="operation()">
+        {{showButton}}
+      </button>
+      <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    </div>
+  </form>
+</div>

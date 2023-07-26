@@ -1,0 +1,32 @@
+{
+  "studentDb": [
+    {
+      "id": 1,
+      "fullName": "Pankaj Kar",
+      "mobile": "9977722525",
+      "gender": "MALE",
+      "city": "Ranchi"
+    },
+    {
+      "id": 5,
+      "fullName": "Ram Kumalll",
+      "mobile": "8888888888",
+      "gender": "MALE",
+      "city": "Delhi"
+    },
+    {
+      "id": 7,
+      "fullName": "Subhash Shaw",
+      "mobile": "9934567895",
+      "gender": "MALE",
+      "city": "Ranchi"
+    },
+    {
+      "id": 8,
+      "fullName": "Rachna agrawal",
+      "mobile": "9965656565",
+      "gender": "LGBTQ",
+      "city": "Ranchi"
+    }
+  ]
+}
